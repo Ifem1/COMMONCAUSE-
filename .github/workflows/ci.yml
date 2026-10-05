@@ -1,0 +1,38 @@
+name: Submission CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+
+      - name: Install verification dependencies
+        run: python -m pip install --upgrade pip && python -m pip install -r requirements-dev.txt
+
+      - name: Preflight
+        run: python scripts/preflight.py
+
+      - name: Direct Mode tests
+        run: python -m pytest tests/ -q
+
+      - name: GenVM lint
+        run: |
+          genvm-lint check contracts/commoncause.py
+          genvm-lint check examples/protected_allocator.py
