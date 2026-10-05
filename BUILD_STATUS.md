@@ -20,6 +20,5 @@ Addresses, transaction hashes, finalized outcomes, mapping/state hashes, and the
 
 - Per-path GEN fees: the stable Studionet tooling available here did not expose reliable per-transaction fee figures. No fee numbers are claimed.
 - Explorer detail-page lookup: the configured explorer returned a service error, and the official transaction page failed to fetch details during this run.
-- GitHub remote: none configured; the workspace was extracted without a `.git` directory. The intended repository is to be created separately by the owner.
 
-No pending item is represented as completed evidence. See [DEPLOYMENT.md](DEPLOYMENT.md) and [proof/README.md](proof/README.md).
+The public submission repository is `Ifem1/COMMONCAUSE-`. No pending item is represented as completed evidence. See [DEPLOYMENT.md](DEPLOYMENT.md) and [proof/README.md](proof/README.md).
