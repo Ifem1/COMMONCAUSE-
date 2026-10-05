@@ -301,7 +301,6 @@ docs/LIVE_DEMO.md                 Studionet 61999 reviewer runbook
 proof/README.md                    where final deployment evidence goes
 DEPLOYMENT.md                     exact Studionet deployment workflow
 SUBMISSION.md                     reviewer-facing submission copy
-IFEM_CODEX_HANDOFF.md             final agent handoff
 scripts/preflight.py              repository sanity checks
 ```
 
