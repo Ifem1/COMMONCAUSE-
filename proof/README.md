@@ -27,9 +27,11 @@ Corrected contract address: 0x3b2Bb3373B1c2d709aceF5744bEA8aae1EdFB012
 Deploy transaction: 0xc25ffde08c63bbe303728dc695eea5b17586acc19b980bd01afc6759c71f75f8
 Finalized: YES
 Consensus: 5 of 5 validators agreed
-Source commit: unavailable; this extracted workspace has no .git directory
+Deployment workspace Git metadata: unavailable at deployment time
 Source file SHA-256: f1fafc01909788cbc4d29e9986cb76f11b8c8ae7166d5a420b064ee6c4c86f57
 ```
+
+The deployment workspace was an extracted copy without `.git`, so no deployment-time Git commit SHA is asserted. The deployed contract source is pinned by the SHA-256 above; the repository's current `contracts/commoncause.py` is retained with that same source checksum.
 
 Explorer links:
 
